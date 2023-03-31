@@ -41,7 +41,7 @@ function editModalOpen(id) {
   document.getElementById("editModal").style.display = "block";
   document
     .getElementById("editButtonSubmit")
-    .setAttribute("onclick", `editSong(${id})`);
+    .setAttribute("onclick", `editCar(${id})`);
 }
 
 function editModalClose() {
@@ -76,7 +76,7 @@ function handleOnLoad() {
 
 
 
-async function addSong() {
+async function addCar() {
 
   let car = 0;
   car = {
