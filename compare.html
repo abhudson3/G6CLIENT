@@ -20,7 +20,7 @@
       
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" >
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">TEA</a>
+          <img src="./resources/images/Group6 logo.png" style="height: 40px; width: 120px;" class="navbar-brand" href="index.html"></img>
           <button
             class="navbar-toggler"
             type="button"
@@ -44,12 +44,64 @@
     <h1>Compare </h1>
     <br>
     <br>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+            <div class="card m-4" style="width: 500px; height: 450px">
+              <br>
+              <br>
+              <div class="card-body">
+                 &nbsp; <img src="https://cdn.motor1.com/images/mgl/Er36N/s1/volkswagen-id.4-official-pictures.jpg" class="card-img-top" alt="not working" style="width: 45%; height: 30%; display: inline; object-fit: cover; margin: auto">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <img src="https://ev-database.org/img/auto/Tesla_Model_S_2016/Tesla_Model_S_2016-01@2x.jpg" class="card-img-top" alt="not working" style="width: 45%; height: 30%; display: inline; object-fit: cover; margin: auto">
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <h3 style="display: inline;">Cost of Ownership/Year : $</h3>
+                  <h3 style="display: inline;" id="evCost"></h3>
+              </div>
+            </div>
+        </div>
+        
+        <div class="col">
+          <div class="card m-4" style="width: 500px; height: 450px">
+            <br>
+            <br>
+            <div class="card-body">
+               &nbsp; <img src="https://icdn-5.motor1.com/images/mgl/OqZmY/s1/2017-chevy-silverado-1500-review.jpg" class="card-img-top" alt="not working" style="width: 45%; height: 30%; display: inline; object-fit: cover; margin: auto">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="http://dmi3w0goirzgw.cloudfront.net/gallery-images/1600/349000/200/349227.jpg" class="card-img-top" alt="not working" style="width: 45%; height: 30%; display: inline; object-fit: cover; margin: auto">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h3 style="display: inline;">Cost of Ownership/Year : $</h3>
+                <h3 style="display: inline" id="gasCost"></h3>
+            </div>
+        </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
     <div id="slider" class="slider">
         <input type="range" min="0" max="30000" value="15000" step="1000" oninput="rangeValue.innerText = this.value">
         <p id="rangeValue">15000</p>
     </div>
     
-    <script src="./resources/scripts/index.js"></script>
+    <script src="./resources/scripts/compare.js"></script>
     
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

@@ -1,4 +1,4 @@
-// const url = "https://pathreeapi.herokuapp.com/api/songs";
+// const url = "https://pathreeapi.herokuapp.com/api/cars";
 const url = "https://localhost:7243/api/cars";
 let cars = [];
 
@@ -17,7 +17,7 @@ let renderCars = function () {
             html += `
                     <div class="card m-4" style="width: 18rem;">
                             <div class="card-body">
-                                <img src="${car.imageLink}" class="card-img-top" alt="not damn working">
+                                <img src="${car.imageLink}" class="card-img-top" alt="not working" style="width: 170px; height: 100px; object-fit: cover;">
                                 <h5 class="card-title"> ${car.make} ${car.model} </h5>
                                 <p id="myBtn" onclick="editModalOpen('${car.id}')"class="btn btn-outline-success">📋</p>
                             </div>
@@ -27,13 +27,11 @@ let renderCars = function () {
     //   }else{
     //     return
     //   }
-    
   });
   html += "</div>";
   document.getElementById("cards").innerHTML = html;
 };
 document.querySelector("#searchText").addEventListener("input", function (e) {
-  console.log(e.target.value);
   renderCars()
 });
 
@@ -108,34 +106,34 @@ async function addCar() {
   addModalClose();
 }
 
-document.querySelector("#new-songs").addEventListener("submit", function (e) {
+document.querySelector("#new-cars").addEventListener("submit", function (e) {
   e.preventDefault(); //prevents page refresh
   addModalOpen()
 });
 
 async function deleteSong(songToFind) {
-  let song = 0;
+  let car = 0;
 
-  for (var i = 0; i < songs.length; i++) {
-    if (songs[i].songId == songToFind) {
-      song = {
-        songId: songs[i].songId,
-        title: songs[i].title,
-        artist: songs[i].artist,
-        dateAdded: songs[i].dateAdded,
-        favorited: songs[i].favorited,
-        deleted: !songs[i].deleted,
+  for (var i = 0; i < cars.length; i++) {
+    if (cars[i].songId == songToFind) {
+      car = {
+        songId: cars[i].songId,
+        title: cars[i].title,
+        artist: cars[i].artist,
+        dateAdded: cars[i].dateAdded,
+        favorited: cars[i].favorited,
+        deleted: !cars[i].deleted,
       };
     }
   }
 
-  await fetch(`${url}/${song.songId}`, {
+  await fetch(`${url}/${car.songId}`, {
     method: "PUT",
     headers: {
       accept: "*/*",
       "content-type": "application/json",
     },
-    body: JSON.stringify(song),
+    body: JSON.stringify(car),
   });
 
   handleOnLoad();
@@ -145,6 +143,7 @@ async function editSong(localCarId) {
   let car = 0;
   for (var i = 0; i < cars.length; i++) {
     if (cars[i].id == localCarId) {
+      
       car = {
         imageLink : document.getElementById("editImageLink").value,
         make: document.getElementById("editMake").value,
@@ -163,6 +162,7 @@ async function editSong(localCarId) {
     }
   }
 
+
   await fetch(`${url}/${localCarId}`, {
     method: "PUT",
     headers: {
@@ -177,40 +177,3 @@ async function editSong(localCarId) {
   handleOnLoad();
 }
 
-async function favoriteSong(songToFind) {
-  let song = 0;
-
-  for (var i = 0; i < songs.length; i++) {
-    if (songs[i].songId == songToFind) {
-      song = {
-        songId: songs[i].songId,
-        title: songs[i].title,
-        artist: songs[i].artist,
-        dateAdded: songs[i].dateAdded,
-        favorited: !songs[i].favorited,
-        deleted: songs[i].deleted,
-      };
-    }
-  }
-
-  await fetch(`${url}/${song.songId}`, {
-    method: "PUT",
-    headers: {
-      accept: "*/*",
-      "content-type": "application/json",
-    },
-    body: JSON.stringify(song),
-  });
-
-  handleOnLoad();
-}
-
-// function blankAdd() {
-//   document.getElementById("title").value = "";
-//   document.getElementById("artist").value = "";
-// }
-
-// function blankEdit() {
-//   document.getElementById("editTitle").value = "";
-//   document.getElementById("editArtist").value = "";
-// }
