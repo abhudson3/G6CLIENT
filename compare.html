@@ -48,6 +48,7 @@
       <div class="row">
         <div class="col">
             <div class="card m-4" style="width: 500px; height: 450px">
+              <h3 style="margin: auto;">Electric Vehicle</h3>
               <br>
               <br>
               <div class="card-body">
@@ -64,7 +65,7 @@
                   <br>
                   <br>
                   <h3 style="display: inline;">Cost of Ownership/Year : $</h3>
-                  <h3 style="display: inline;" id="evCost"></h3>
+                  <h3 style="display: inline;" id="evCost">915</h3>
               </div>
             </div>
         </div>
@@ -74,7 +75,8 @@
             <br>
             <br>
             <div class="card-body">
-               &nbsp; <img src="https://icdn-5.motor1.com/images/mgl/OqZmY/s1/2017-chevy-silverado-1500-review.jpg" class="card-img-top" alt="not working" style="width: 45%; height: 30%; display: inline; object-fit: cover; margin: auto">
+              &nbsp;
+              <img src="https://icdn-5.motor1.com/images/mgl/OqZmY/s1/2017-chevy-silverado-1500-review.jpg" class="card-img-top" alt="not working" style="width: 45%; height: 30%; display: inline; object-fit: cover; margin: auto">
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <img src="http://dmi3w0goirzgw.cloudfront.net/gallery-images/1600/349000/200/349227.jpg" class="card-img-top" alt="not working" style="width: 45%; height: 30%; display: inline; object-fit: cover; margin: auto">
                 <br>
@@ -87,7 +89,7 @@
                 <br>
                 <br>
                 <h3 style="display: inline;">Cost of Ownership/Year : $</h3>
-                <h3 style="display: inline" id="gasCost"></h3>
+                <h3 style="display: inline" id="gasCost">1500</h3>
             </div>
         </div>
         </div>
@@ -97,6 +99,9 @@
       <br>
       <br>
     <div id="slider" class="slider">
+        <label style="font-size: 75%;" for="range">Miles Driven/Year</label>
+        &nbsp;
+        &nbsp;
         <input type="range" min="0" max="30000" value="15000" step="1000" oninput="rangeValue.innerText = this.value">
         <p id="rangeValue">15000</p>
     </div>

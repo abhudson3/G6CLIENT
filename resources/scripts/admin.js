@@ -20,6 +20,7 @@ let renderCars = function () {
                                 <img src="${car.imageLink}" class="card-img-top" alt="not working" style="width: 170px; height: 100px; object-fit: cover;">
                                 <h5 class="card-title"> ${car.make} ${car.model} </h5>
                                 <p id="myBtn" onclick="editModalOpen('${car.id}')"class="btn btn-outline-success">📋</p>
+                                <p id="softDelButton" onclick="softDelete('${car.id}')"class="btn btn-outline-success">🗑️</p>
                             </div>
                         </div>
                     `;
@@ -139,10 +140,13 @@ async function deleteSong(songToFind) {
   handleOnLoad();
 }
 
-async function editSong(localCarId) {
+async function editCar(localCarId) {
   let car = 0;
+
+
   for (var i = 0; i < cars.length; i++) {
     if (cars[i].id == localCarId) {
+      //make it so that when the user submits the edit, there can be blank fields
       
       car = {
         imageLink : document.getElementById("editImageLink").value,
@@ -158,6 +162,44 @@ async function editSong(localCarId) {
         batteryCapacity : document.getElementById("editBatteryCapacity").value,
         seats : document.getElementById("editSeats").value,
         msrp : document.getElementById("editMsrp").value
+      };
+    }
+  }
+
+
+  await fetch(`${url}/${localCarId}`, {
+    method: "PUT",
+    headers: {
+      accept: "*/*",
+      "content-type": "application/json",
+    },
+    body: JSON.stringify(car),
+  });
+
+
+  document.getElementById("myModal").style.display = "none";
+  handleOnLoad();
+}
+async function softDelete(localCarId) {
+  let car = 0;
+  for (var i = 0; i < cars.length; i++) {
+    if (cars[i].id == localCarId) {
+      
+      car = {
+        imageLink : cars[i].imageLink,
+        make: cars[i].make,
+        model: cars[i].model,
+        vehicleType : cars[i].vehicleType,
+        motorKw : cars[i].motorKw,
+        drivetrain : cars[i].drivetrain,
+        mpge : cars[i].mpge,
+        vehicleRange : cars[i].vehicleRange,
+        chargeRateL2Dc : cars[i].chargeRateL2Dc,
+        chargeRateMphL1L2Dc : cars[i].chargeRateMphL1L2Dc,
+        batteryCapacity : cars[i].batteryCapacity,
+        seats : cars[i].seats,
+        msrp : cars[i].msrp,
+        deleted : !cars[i].deleted
       };
     }
   }
