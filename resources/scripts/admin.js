@@ -7,13 +7,12 @@ let renderCars = function () {
   cars.forEach(function (car) {
     if (car.make.toLowerCase().includes(document.getElementById("searchText").value.toLowerCase()) || car.model.toLowerCase().includes(document.getElementById("searchText").value.toLowerCase()))
       {
-        //   if (song.deleted != true) {
-            // var favorited = "";
-            // if (song.favorited == true) {
-            //   favorited = "💚";
-            // } else {
-            //   favorited = "♡";
-            // }
+            var deleted = "";
+            if (car.deleted == true) {
+              deleted = "🚫";
+            } else {
+              deleted = "💚";
+            }
             html += `
                     <div class="card m-4" style="width: 18rem;">
                             <div class="card-body">
@@ -21,13 +20,12 @@ let renderCars = function () {
                                 <h5 class="card-title"> ${car.make} ${car.model} </h5>
                                 <p id="myBtn" onclick="editModalOpen('${car.id}')"class="btn btn-outline-success">📋</p>
                                 <p id="softDelButton" onclick="softDelete('${car.id}')"class="btn btn-outline-success">🗑️</p>
+                                <p id="deletedIndicator" "class="btn btn-outline-success">Deleted : ${deleted}</p>
                             </div>
                         </div>
                     `;
           }
-    //   }else{
-    //     return
-    //   }
+
   });
   html += "</div>";
   document.getElementById("cards").innerHTML = html;
@@ -41,6 +39,23 @@ function editModalOpen(id) {
   document
     .getElementById("editButtonSubmit")
     .setAttribute("onclick", `editCar(${id})`);
+  for (var i = 0; i < cars.length; i++) {
+    if (cars[i].id == id) {
+      document.getElementById("editImageLink").value = cars[i].imageLink;
+      document.getElementById("editMake").value = cars[i].make;
+      document.getElementById("editModel").value = cars[i].model;
+      document.getElementById("editVehicleType").value = cars[i].vehicleType;
+      document.getElementById("editMotorKw").value = cars[i].motorKw;
+      document.getElementById("editDrivetrain").value = cars[i].drivetrain;
+      document.getElementById("editMpge").value = cars[i].mpge;
+      document.getElementById("editVehicleRange").value = cars[i].vehicleRange;
+      document.getElementById("editChargeRateL2Dc").value = cars[i].chargeRateL2Dc;
+      document.getElementById("editChargeRateMphL1L2Dc").value = cars[i].chargeRateMphL1L2Dc;
+      document.getElementById("editBatteryCapacity").value = cars[i].batteryCapacity;
+      document.getElementById("editSeats").value = cars[i].seats;
+      document.getElementById("editMsrp").value = cars[i].msrp;
+    }
+  }
 }
 
 function editModalClose() {
@@ -177,7 +192,7 @@ async function editCar(localCarId) {
   });
 
 
-  document.getElementById("myModal").style.display = "none";
+  document.getElementById("editModal").style.display = "none";
   handleOnLoad();
 }
 async function softDelete(localCarId) {
@@ -214,8 +229,6 @@ async function softDelete(localCarId) {
     body: JSON.stringify(car),
   });
 
-
-  document.getElementById("myModal").style.display = "none";
   handleOnLoad();
 }
 
