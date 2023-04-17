@@ -35,4 +35,24 @@
     text-decoration: none;
     cursor: pointer;
   }
+  nav a {
+    text-decoration: none;
+    font-size: larger;
+    margin: auto;
+    padding: 10px;
+    color: black;
+}
+
+nav {
+    padding-left: 2%;
+}
+
+#logoutbutton {
+    float: right;
+    padding-right: 8%;
+}
+nav a:hover {
+
+    color: grey;
+}
   

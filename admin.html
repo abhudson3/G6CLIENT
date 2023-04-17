@@ -17,46 +17,28 @@
 
   <body onload="handleOnLoad()">
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">TEA</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            </ul>
-          </div>
-        </div>
+      <br>
+      <nav> 
+        <a class="navbar-brand" href="index.html"><img src="./resources/images/Group6 logo.png" width="10%"></a>
+        <input id='addCarButton' type='submit' onclick="addModalOpen()" value="➕" class="btn btn-outline-secondary" />
+        <a href="index.html" id="logoutbutton">Log Out</a>
+        &nbsp;
       </nav>
+      <br>
+      <hr style="width: 80%; margin: auto;"> <br>
     </header>
-    <!-- jumbotron -->
-
-    <!-- <div class="p-1 mb-2 bg-light rounded-2">
-      <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold" style="padding-top: 40px">My Songs</h1>
-      </div>
-    </div> -->
     <br>
-    <br>
-    <br>
-    <hr style="width:1200px; margin: auto;"><br>
     <div class="form-group has-search" style="width: 250px; margin: auto">
-      <span class="fa fa-search form-control-feedback"></span>
-      <input id="searchText" type="text" class="form-control" placeholder="Search">
+      
+      
+      <!-- <span class="fa fa-search form-control-feedback"></span> -->
+      &nbsp;
+      <input style="display: inline;" id="searchText" type="text" class="form-control" placeholder="Search">
     </div>
 
     <!-- Project Cards -->
     
-      <div class="row align-items-start">
+      <!-- <div class="row align-items-start">
         <div class="col">
           <form id="new-cars" style="padding-left: 20px">
             <div class="mb-3">
@@ -65,7 +47,7 @@
               <input id='addCarButton' type='submit' onclick="addModalOpen()" value="➕" class="btn btn-outline-secondary" />
             </div>
           </form>
-        </div>
+        </div> -->
   
 
 <!-- The Modal -->

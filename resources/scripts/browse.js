@@ -12,6 +12,7 @@ let renderCars = function () {
             html += `
                     <div class="card m-4" style="width: 18rem;">
                             <div class="card-body">
+                                
                                 <img onclick="setTransferCarId('${car.id}')" src="${car.imageLink}" class="card-img-top" alt="not working" style="width: 170px; height: 100px; object-fit: cover;">
                                 <h5 class="card-title"> ${car.make} ${car.model} </h5>
                                 <h6 class="card-subtitle mb-2 text-muted">2023</h6>

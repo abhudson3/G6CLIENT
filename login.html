@@ -1,55 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>HTML Login Page with Bootstrap Example</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Muli'><link rel="stylesheet" href="./resources/styles/login.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEA</title>
+    <link rel="stylesheet" href='./resources/styles/login.css'>
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" >
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">TEA</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarCollapse"
-        aria-controls="navbarCollapse"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        </ul>
-      </div>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <br>
+      <nav> 
+        <a class="navbar-brand" href="index.html"><img src="./resources/images/Group6 logo.png" width="10%"></a>
+        <a href="browse.html">Browse</a>
+        <a href="compare.html">Compare</a>
+      </nav>
+      <br>
+      <hr style="width: 80%; margin: auto;"> <br>
+    </header>
+    <br>
+    <br>
+    
+    <div class="pt-5">
+      <h1 class="text-center">Admin Login</h1>
+    <br>
+    <br>
+    <br>
+    <div class="mb-3" style="width: 25%; margin: auto;">
+      <label for="exampleFormControlInput1" class="form-label">Username</label>
+      <input style="stroke: AF7A7A" type="email" class="form-control" id="usernameBox" placeholder="Username">
     </div>
-  </nav>
-  <br>
-<div class="pt-5">
-  <h1 class="text-center">Admin Login</h1>
-<br>
-<br>
-<br>
-<div class="mb-3" style="width: 25%; margin: auto;">
-  <label for="exampleFormControlInput1" class="form-label">Username</label>
-  <input style="stroke: AF7A7A" type="email" class="form-control" id="usernameBox" placeholder="Username">
-</div>
-<div class="mb-3" style="width: 25%; margin: auto;">
-  <label for="exampleFormControlInput1" class="form-label">Password</label>
-  <input style="stroke: AF7A7A" type="password" class="form-control" id="passwordBox" placeholder="password1">
-</div>
-<br>
-<div class="mb-3" style="width: 5%; margin: auto; overflow: hidden; height: 34;">
-  <button id="loginButton" class="btn btn-danger btn-block">Log In</button>
-</div>
-
-<script src="./resources/scripts/login.js"></script>
-
-  
-</body>
+    <div class="mb-3" style="width: 25%; margin: auto;">
+      <label for="exampleFormControlInput1" class="form-label">Password</label>
+      <input style="stroke: AF7A7A" type="password" class="form-control" id="passwordBox" placeholder="password1">
+    </div>
+    <br>
+    <div class="mb-3" style="width: 5%; margin: auto; overflow: hidden; height: 34;">
+      <button id="loginButton" class="btn btn-danger btn-block">Log In</button>
+    </div>
+    
+    <script src="./resources/scripts/login.js"></script>
+    
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

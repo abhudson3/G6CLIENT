@@ -35,3 +35,26 @@ input[type=checkbox]
   font-size: 110%;
 
 }
+nav a {
+    
+  text-decoration: none !important;
+  font-size: larger !important;
+  margin: auto !important;
+  padding: 10px !important;
+  color: black !important;
+}
+
+nav {
+  
+  padding-left: 2% !important;
+}
+
+nav a:hover {
+  
+  color: grey !important;
+}
+#loginbutton {
+  
+  float: right !important;
+  padding-right: 8% !important;
+}
