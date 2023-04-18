@@ -1,5 +1,5 @@
-// const url = "https://pathreeapi.herokuapp.com/api/songs";
-const url = "https://localhost:7243/api/cars";
+const url = "https://groupsixapi.herokuapp.com/api/cars";
+// const url = "https://localhost:7243/api/cars";
 let cars = [];
 
 let renderCars = function () {
@@ -13,8 +13,9 @@ let renderCars = function () {
                     <div class="card m-4" style="width: 18rem;">
                             <div class="card-body">
                                 
-                                <img onclick="setTransferCarId('${car.id}')" src="${car.imageLink}" class="card-img-top" alt="not working" style="width: 170px; height: 100px; object-fit: cover;">
+                                <img onclick="setTransferCarId('${car.id}')" src="${car.imageLink}" class="card-img" alt="not working" style="width: 170px; height: 100px; object-fit: cover;">
                                 <h5 class="card-title"> ${car.make} ${car.model} </h5>
+                                <br>
                                 <h6 class="card-subtitle mb-2 text-muted">2023</h6>
                                 <p class="card-text">Price: ${car.msrp}</p>
                             </div>

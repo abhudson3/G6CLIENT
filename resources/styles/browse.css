@@ -21,3 +21,8 @@ nav a {
     float: right !important;
     padding-right: 8% !important;
   }
+.row{
+  /* margin: auto !important; */
+  justify-content: center;
+}
+

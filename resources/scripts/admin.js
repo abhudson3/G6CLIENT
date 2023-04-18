@@ -1,5 +1,5 @@
-// const url = "https://pathreeapi.herokuapp.com/api/cars";
-const url = "https://localhost:7243/api/cars";
+const url = "https://groupsixapi.herokuapp.com/api/cars";
+// const url = "https://localhost:7243/api/cars";
 let cars = [];
 
 let renderCars = function () {
@@ -16,7 +16,7 @@ let renderCars = function () {
             html += `
                     <div class="card m-4" style="width: 18rem;">
                             <div class="card-body">
-                                <img src="${car.imageLink}" class="card-img-top" alt="not working" style="width: 170px; height: 100px; object-fit: cover;">
+                                <img src="${car.imageLink}" class="card-img" alt="not working" style="width: 170px; height: 100px; object-fit: cover;">
                                 <h5 class="card-title"> ${car.make} ${car.model} </h5>
                                 <p id="myBtn" onclick="editModalOpen('${car.id}')"class="btn btn-outline-success">📋</p>
                                 <p id="softDelButton" onclick="softDelete('${car.id}')"class="btn btn-outline-success">🗑️</p>
@@ -122,10 +122,10 @@ async function addCar() {
   addModalClose();
 }
 
-document.querySelector("#new-cars").addEventListener("submit", function (e) {
-  e.preventDefault(); //prevents page refresh
-  addModalOpen()
-});
+// document.querySelector("#new-cars").addEventListener("submit", function (e) {
+//   e.preventDefault(); //prevents page refresh
+//   addModalOpen()
+// });
 
 async function deleteSong(songToFind) {
   let car = 0;

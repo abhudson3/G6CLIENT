@@ -20,6 +20,10 @@
     border: 1px solid #888;
     width: 40% !important;
   }
+  .row{
+    /* margin: auto !important; */
+    justify-content: center;
+  }
   
   /* The Close Button */
   .close {
@@ -56,3 +60,6 @@ nav a:hover {
     color: grey;
 }
   
+img:hover{
+  color: grey;
+}
