@@ -99,7 +99,7 @@ function chargeratel2dcq(){
   alert("Charge Rate L2 DC refers to the rate at which the vehicle can charge at a Level 2 or DC charger. For example, 100, 200, or 300.")
 }
 function chargeratemphq(){
-  alert("Charge Rate Mph L1 L2 DC refers to the rate at which the vehicle can charge, in Miles/hour, at a Level 1, Level 2, and DC charger. For example, 100, 200, or 300.")
+  alert("Charge Rate Mph L1 L2 DC refers to the rate at which the vehicle can charge, in Miles/hour, at a Level 1, Level 2, and DC charger. For example, 100, 200, or 300 miles/hour.")
 }
 function batterycapacityq(){
   alert("Battery Capacity refers to the amount of energy the battery can store. This is usually in a KWh, or Kilowatt hours For example, 100, 200, or 300 KWh.")
