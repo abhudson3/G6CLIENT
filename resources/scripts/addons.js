@@ -74,6 +74,42 @@ window.onclick = function (event) {
     document.getElementById("editModal").style.display = "none";
   }
 };
+function makeq(){
+  alert("Make refers to the manufacturer of the vehicle. For example, Tesla, Ford, or Nissan.")
+}
+function modelq(){
+  alert("Model refers to the specific model of the vehicle. For example, Model 3, F-150, or Leaf.")
+}
+function vehicletypeq(){
+  alert("Vehicle Type refers to the type of vehicle. For example, Sedan, Truck, or SUV.")
+}
+function motorkwq(){
+  alert("Motor Kw refers to the power of the motor in kilowatts. For example, 100, 200, or 300 KW.")
+}
+function drivetrainq(){
+  alert("Drivetrain refers to the type of drive the vehicle has. For example, RWD, AWD, or FWD.")
+}
+function mpgeq(){
+  alert("MPGe refers to the miles per gallon equivalent of the vehicle. For example, 100, 200, or 300 miles per gallon.")
+}
+function vehiclerangeq(){
+  alert("Vehicle Range refers to the distance the vehicle can travel on a full charge. For example, 100, 200, or 300 miles.")
+}
+function chargeratel2dcq(){
+  alert("Charge Rate L2 DC refers to the rate at which the vehicle can charge at a Level 2 or DC charger. For example, 100, 200, or 300.")
+}
+function chargeratemphq(){
+  alert("Charge Rate Mph L1 L2 DC refers to the rate at which the vehicle can charge, in Miles/hour, at a Level 1, Level 2, and DC charger. For example, 100, 200, or 300.")
+}
+function batterycapacityq(){
+  alert("Battery Capacity refers to the amount of energy the battery can store. This is usually in a KWh, or Kilowatt hours For example, 100, 200, or 300 KWh.")
+}
+function seatsq(){
+  alert("Seats refers to the number of seats in the vehicle. For example, most vehicles in this list have 5 seats.")
+}
+function msrpq(){
+  alert("MSRP refers to the manufacturer's suggested retail price of the vehicle. For example, 100, 200, or 300.")
+}
 
 
 document.querySelector("#leatherCheckbox").addEventListener("change", function (e) {

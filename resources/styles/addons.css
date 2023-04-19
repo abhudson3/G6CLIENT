@@ -96,3 +96,11 @@ nav a:hover {
   cursor: pointer;
 }
 
+label {
+  display: inline-block;
+}
+
+button {
+  display: inline-block;
+  margin-left: 10px;
+}

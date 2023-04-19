@@ -97,34 +97,120 @@
           <div class="col" id="addOnCar">
           </div>
         </div>
+
+        
+        
         <div id="editModal" class="modal">
           <!-- Modal content -->
           <div class="modal-content">
             <span class="close" onclick="editModalClose()">&times;</span>
             <h3>Detailed Specs</h3>
             <br>
-            <input id="editMake" placeholder="Make" width="20px">
+            <div class="labelbutton" style="display: flex; align-items: center; padding-bottom: 10px;">
+              <label>Make: </label>
+              &nbsp;&nbsp;&nbsp;
+              <button onclick="makeq()" id="makeq" type="button" class="btn btn-outline-info" style="height: 34px; width: 33px; justify-content: right;">?</button>
+            </div>
+
+            <input style="display: inline" id="editMake" placeholder="Make" width="20px">
             <br>
+
+            <div class="labelbutton" style="display: flex; align-items: center; padding-bottom: 10px;">
+              <label>Model: </label>
+              &nbsp;&nbsp;&nbsp;
+              <button onclick="modelq()" id="modelq" type="button" class="btn btn-outline-info" style="height: 34px; width: 33px; justify-content: right;">?</button>
+            </div>
+
             <input id="editModel" placeholder="Model" width="25px">
             <br>
+
+            <div class="labelbutton" style="display: flex; align-items: center; padding-bottom: 10px;">
+              <label>Vehicle Type: </label>
+              &nbsp;&nbsp;&nbsp;
+              <button onclick="vehicletypeq()" id="vehicletypeq" type="button" class="btn btn-outline-info" style="height: 34px; width: 33px; justify-content: right;">?</button>
+            </div>
+            
             <input id="editVehicleType" placeholder="Vehicle Type" width="25px">
             <br>
+
+            <div class="labelbutton" style="display: flex; align-items: center; padding-bottom: 10px;">
+              <label>Drivetrain: </label>
+              &nbsp;&nbsp;&nbsp;
+              <button onclick="drivetrainq()" id="drivetrainq" type="button" class="btn btn-outline-info" style="height: 34px; width: 33px; justify-content: right;">?</button>
+            </div>
+
             <input id="editDrivetrain" placeholder="Drivetrain" width="25px">
             <br>
+            
+            <div class="labelbutton" style="display: flex; align-items: center; padding-bottom: 10px;">
+              <label>MPGE: </label>
+              &nbsp;&nbsp;&nbsp;
+              <button onclick="mpgeq()" id="mpgeq" type="button" class="btn btn-outline-info" style="height: 34px; width: 33px; justify-content: right;">?</button>
+            </div>
+
             <input id="editMpge" placeholder="MPGE" width="25px">
             <br>
+            
+            <div class="labelbutton" style="display: flex; align-items: center; padding-bottom: 10px;">
+              <label>Motor KW: </label>
+              &nbsp;&nbsp;&nbsp;
+              <button onclick="motorkwq()" id="motorkwq" type="button" class="btn btn-outline-info" style="height: 34px; width: 33px; justify-content: right;">?</button>
+            </div>
+
             <input id="editMotorKw" placeholder="Motor Kw" width="25px">
             <br>
+            
+            <div class="labelbutton" style="display: flex; align-items: center; padding-bottom: 10px;">
+              <label>Vehicle Range: </label>
+              &nbsp;&nbsp;&nbsp;
+              <button onclick="vehiclerangeq()" id="vehiclerangeq" type="button" class="btn btn-outline-info" style="height: 34px; width: 33px; justify-content: right;">?</button>
+            </div>
+
             <input id="editVehicleRange" placeholder="Vehicle Range" width="25px">
             <br>
+            
+            <div class="labelbutton" style="display: flex; align-items: center; padding-bottom: 10px;">
+              <label>Charge Rate L2/DC: </label>
+              &nbsp;&nbsp;&nbsp;
+              <button onclick="chargeratel2dcq()" id="chargeratel2q" type="button" class="btn btn-outline-info" style="height: 34px; width: 33px; justify-content: right;">?</button>
+            </div>
+
             <input id="editChargeRateL2Dc" placeholder="Charge Rate L2/DC" width="25px">
             <br>
+            
+            <div class="labelbutton" style="display: flex; align-items: center; padding-bottom: 10px;">
+              <label>Charge Rate in MPH L1/L2/DC: </label>
+              &nbsp;&nbsp;&nbsp;
+              <button onclick="chargeratemphq()" id="chargeratemphq" type="button" class="btn btn-outline-info" style="height: 34px; width: 33px; justify-content: right;">?</button>
+            </div>
+
             <input id="editChargeRateMphL1L2Dc" placeholder="Charge Rate in MPH L1/L2/DC" width="25px">
             <br>
+            
+            <div class="labelbutton" style="display: flex; align-items: center; padding-bottom: 10px;">
+              <label>Battery Capacity: </label>
+              &nbsp;&nbsp;&nbsp;
+              <button onclick="batterycapacityq()" id="batterycapacityq" type="button" class="btn btn-outline-info" style="height: 34px; width: 33px; justify-content: right;">?</button>
+            </div>
+
             <input id="editBatteryCapacity" placeholder="Battery Capacity" width="25px">
             <br>
+            
+            <div class="labelbutton" style="display: flex; align-items: center; padding-bottom: 10px;">
+              <label>Seats: </label>
+              &nbsp;&nbsp;&nbsp;
+              <button onclick="seatsq()" id="seatsq" type="button" class="btn btn-outline-info" style="height: 34px; width: 33px; justify-content: right;">?</button>
+            </div>
+
             <input id="editSeats" placeholder="Seats" width="25px">
             <br>
+            
+            <div class="labelbutton" style="display: flex; align-items: center; padding-bottom: 10px;">
+              <label>MSRP: </label>
+              &nbsp;&nbsp;&nbsp;
+              <button onclick="msrpq()" id="msrpq" type="button" class="btn btn-outline-info" style="height: 34px; width: 33px; justify-content: right;">?</button>
+            </div>
+
             <input id="editMsrp" placeholder="MSRP" width="25px">
             <br>
           </div>
