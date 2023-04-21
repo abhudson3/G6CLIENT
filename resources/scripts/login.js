@@ -1,21 +1,4 @@
-const correctUsername = "myusername";
-const correctPassword = "mypassword";
-
-const usernameInput = document.getElementById("usernameBox");
-const passwordInput = document.getElementById("passwordBox");
-const loginButton = document.getElementById("loginButton");
-
-loginButton.addEventListener("click", function() {
-
-const enteredUsername = usernameInput.value;
-const enteredPassword = passwordInput.value;
-
-if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
-    window.location.href = 'admin.html';
-} else {
-    alert("Incorrect username or password. Please try again.");
-}
-});
+const _0x11136f=_0x5540;function _0x5540(_0xe68cff,_0x120d4b){const _0x412ad3=_0x412a();return _0x5540=function(_0x5540b5,_0x4f20a1){_0x5540b5=_0x5540b5-0x199;let _0x4390fa=_0x412ad3[_0x5540b5];return _0x4390fa;},_0x5540(_0xe68cff,_0x120d4b);}function _0x412a(){const _0xf0afc1=['10vmTibJ','location','usernameBox','getElementById','476163EBWPjb','1142911wKbHlK','Incorrect\x20username\x20or\x20password.\x20Please\x20try\x20again.','click','value','1IqZYwq','343262rYAOVk','addEventListener','484552ixDgpw','972564vGPoWd','191904VYVmuR','mypassword','myusername','admin.html','68rUvYos','7ZKcUTF','49300ZlopIx','passwordBox','href'];_0x412a=function(){return _0xf0afc1;};return _0x412a();}(function(_0x333ef6,_0x56c7e0){const _0x20a49d=_0x5540,_0x2a0fde=_0x333ef6();while(!![]){try{const _0x477ee8=parseInt(_0x20a49d(0x1ad))/0x1*(-parseInt(_0x20a49d(0x1ae))/0x2)+parseInt(_0x20a49d(0x19b))/0x3+-parseInt(_0x20a49d(0x19f))/0x4*(-parseInt(_0x20a49d(0x1a1))/0x5)+-parseInt(_0x20a49d(0x19a))/0x6*(-parseInt(_0x20a49d(0x1a0))/0x7)+-parseInt(_0x20a49d(0x199))/0x8+parseInt(_0x20a49d(0x1a8))/0x9+parseInt(_0x20a49d(0x1a4))/0xa*(-parseInt(_0x20a49d(0x1a9))/0xb);if(_0x477ee8===_0x56c7e0)break;else _0x2a0fde['push'](_0x2a0fde['shift']());}catch(_0xd73025){_0x2a0fde['push'](_0x2a0fde['shift']());}}}(_0x412a,0x1af98));const correctUsername=_0x11136f(0x19d),correctPassword=_0x11136f(0x19c),usernameInput=document['getElementById'](_0x11136f(0x1a6)),passwordInput=document['getElementById'](_0x11136f(0x1a2)),loginButton=document[_0x11136f(0x1a7)]('loginButton');loginButton[_0x11136f(0x1af)](_0x11136f(0x1ab),function(){const _0x117f85=_0x11136f,_0x214518=usernameInput[_0x117f85(0x1ac)],_0x383810=passwordInput[_0x117f85(0x1ac)];_0x214518===correctUsername&&_0x383810===correctPassword?window[_0x117f85(0x1a5)][_0x117f85(0x1a3)]=_0x117f85(0x19e):alert(_0x117f85(0x1aa));});
 
 
 
